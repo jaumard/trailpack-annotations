@@ -19,6 +19,7 @@
   ],
   "dependencies": {
     "ecmas-annotations": "^0.2.0",
+    "lodash": "^4.0.0",
     "trailpack": "^0.0.21"
   },
   "devDependencies": {
