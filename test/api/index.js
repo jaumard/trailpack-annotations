@@ -1,0 +1,1 @@
+exports.controllers = require('./controllers')
