@@ -1,0 +1,1 @@
+exports.MyCustomAnnotation = require('./MyCustomAnnotation')

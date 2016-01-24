@@ -1,5 +1,5 @@
 # trailpack-annotations
-:package: Add annotation support for Tails.js applications
+:package: Add Route, Policy and custom annotations support for Tails.js applications
 
 ## Intallation
 With yo : 
@@ -19,7 +19,8 @@ With npm (you will have to create config file manually) :
 module.exports = {
   policy: true,//enable policy annotations
   route: true,//enable route annotations
-  pathToScan: './api/controllers'//or ./api for hmvc
+  pathToScan: './api/controllers',//or ./api for hmvc
+  customAnnotations: null, //Add your custom annotations here, require('./annotations') for example
     
 }
 ```
@@ -51,7 +52,50 @@ module.exports = class DefaultController extends Controller {
    * @Policy("Default.auth") or @Policy(["Default.auth", "Default.acl"])
    */
   info (request, reply) {
-    reply.json(this.app.services.DefaultService.getApplicationInfo())
+    reply.json(this.app.services.Defaultervice.getApplicationInfo())
   }
 }
 ```
+
+### Custom 
+Create your own annotation like this : 
+
+```
+'use strict'
+const Annotation = require('ecmas-annotations').Annotation
+
+module.exports = class MyCustomAnnotation extends Annotation{
+
+    /**
+     * The possible targets
+     *
+     * (Annotation.CONSTRUCTOR, Annotation.PROPERTY, Annotation.METHOD)
+     *
+     * @type {Array}
+     */
+    static get targets() {
+      return [Annotation.METHOD]
+    }
+
+    /**
+     * The function to call when annotations are find
+     *
+     * @type {Function}
+     */
+    handler(app, annotation) {
+      //Do whatever you want when annotation is found
+    }
+
+    /**
+     * File path
+     *
+     * @type {String}
+     */
+    static get path() {
+      return './annotations/MyCustomAnnotation.js'
+    }
+
+}
+
+```
+Now I can add `@MyCustomAnnotation("It's works")` on methods.

@@ -12,7 +12,7 @@ const App = {
       policy: true,
       route: true,
       pathToScan: './test/api/controllers',
-      customAnnotations: {}
+      customAnnotations: require('./annotations')
     },
     main: {
       packs: [

@@ -45,4 +45,11 @@ describe('Annotations', () => {
       done()
     })
   })
+  describe('Custom', () => {
+    it('app should have config.annotations.myCustomAnnotation', (done) => {
+      assert(global.app.config.annotations.myCustomAnnotation)
+      assert.equal(global.app.config.annotations.myCustomAnnotation, 'It\'s works')
+      done()
+    })
+  })
 })

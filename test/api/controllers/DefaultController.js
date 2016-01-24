@@ -13,6 +13,7 @@ module.exports = class DefaultController extends Controller{
    * @Route({method: ["GET", "DELETE"], path: "/default/info"})
    * @Policy("Default.auth")
    * @Policy(["Default.acl"])
+   * @MyCustomAnnotation("It's works")
    * @param request
    * @param reply
    */
