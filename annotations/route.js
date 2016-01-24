@@ -7,14 +7,7 @@ const _ = require('lodash')
  *
  * @type {*}
  */
-module.exports = Annotation.extend({
-
-  /**
-   * The name of the annotation
-
-   * @type {String}
-   */
-  annotation: 'Route',
+module.exports = class Route extends Annotation {
 
   /**
    * The possible targets
@@ -23,21 +16,17 @@ module.exports = Annotation.extend({
    *
    * @type {Array}
    */
-  targets: [Annotation.METHOD],
+  static get targets() {
+    return [Annotation.METHOD]
+  }
 
-  /**
-   * The main value
-   *
-   * @type {String}
-   */
-  value: '',
 
   /**
    * The function to call when annotations are find
    *
    * @type {Function}
    */
-  handler: (app, annotation) => {
+  handler(app, annotation) {
     let infos = {}
 
     if (!annotation.className) {
@@ -58,13 +47,15 @@ module.exports = Annotation.extend({
     }
 
     app.config.routes.push(infos)
-  },
+  }
 
   /**
    * File path
    *
    * @type {String}
    */
-  path: '../annotations/route'
+  static get path() {
+    return '../annotations/route'
+  }
 
-})
+}

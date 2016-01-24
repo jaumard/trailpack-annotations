@@ -18,7 +18,7 @@
     "trailjs"
   ],
   "dependencies": {
-    "ecmas-annotations": "^0.2.1",
+    "ecmas-annotations": "^0.3.0",
     "glob": "^6.0.4",
     "lodash": "^4.0.0",
     "trailpack": "^0.0.21"

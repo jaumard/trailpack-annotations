@@ -7,14 +7,7 @@ const _ = require('lodash')
 module.exports = class AnnotationsTrailpack extends Trailpack {
 
   /**
-   * TODO document method
-   */
-  validate() {
-
-  }
-
-  /**
-   * TODO document method
+   * Search for annotations and configure routes/policies found
    */
   configure() {
     if (this.app.config.annotations && !this.app.config.annotations.customAnnotations) {
@@ -26,17 +19,9 @@ module.exports = class AnnotationsTrailpack extends Trailpack {
     return Promise.resolve()
   }
 
-  /**
-   * TODO document method
-   */
-  initialize() {
-
-  }
-
   constructor(app) {
     super(app, {
       config: require('./config'),
-      api: require('./api'),
       pkg: require('./package')
     })
   }

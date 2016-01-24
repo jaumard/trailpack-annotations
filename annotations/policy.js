@@ -7,14 +7,7 @@ const _ = require('lodash')
  *
  * @type {*}
  */
-module.exports = Annotation.extend({
-
-  /**
-   * The name of the annotation
-
-   * @type {String}
-   */
-  annotation: 'Policy',
+module.exports = class Policy extends Annotation {
 
   /**
    * The possible targets
@@ -23,21 +16,16 @@ module.exports = Annotation.extend({
    *
    * @type {Array}
    */
-  targets: [Annotation.METHOD],
-
-  /**
-   * The main value
-   *
-   * @type {String}
-   */
-  value: '',
+  static get targets() {
+    return [Annotation.METHOD]
+  }
 
   /**
    * The function to call when annotations are find
    *
    * @type {Function}
    */
-  handler: (app, annotation) => {
+  handler(app, annotation) {
 
     if (!annotation.className) {
       annotation.className = _.last(annotation.filePath.split('/')).replace('.js', '')
@@ -57,13 +45,14 @@ module.exports = Annotation.extend({
     else {
       policies[annotation.className][annotation.target].push(annotation.value)
     }
-  },
+  }
 
   /**
    * File path
    *
    * @type {String}
    */
-  path: '../annotations/policy.js'
-
-})
+  static get path() {
+    return '../annotations/policy.js'
+  }
+}

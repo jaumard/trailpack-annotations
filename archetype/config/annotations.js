@@ -10,5 +10,5 @@ module.exports = {
   policy: true,//Enable @Policy
   route: true,//Enable @Route
   pathToScan: './api/controllers',//Where to search controllers
-  customAnnotations: null//Custom annotations here
+  customAnnotations: {}//Custom annotations here
 }
