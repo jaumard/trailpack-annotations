@@ -1,6 +1,6 @@
 {
   "name": "trailpack-annotations",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Add annotations support for Tails.js applications",
   "homepage": "https://github.com/jaumard/trailpack-annotations",
   "author": {
