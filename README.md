@@ -1,4 +1,10 @@
 # trailpack-annotations
+[![Gitter][gitter-image]][gitter-url]
+[![NPM version][npm-image]][npm-url]
+[![Build status][ci-image]][ci-url]
+[![Dependency Status][daviddm-image]][daviddm-url]
+[![Code Climate][codeclimate-image]][codeclimate-url]
+
 :package: Add Route, Policy and custom annotations support for Tails.js applications
 
 ## Intallation
@@ -99,3 +105,18 @@ module.exports = class MyCustomAnnotation extends Annotation{
 
 ```
 Now I can add `@MyCustomAnnotation("It's works")` on methods.
+
+## License
+[MIT](https://github.com/jaumard/trailpack-annotations/blob/master/LICENSE)
+
+
+[npm-image]: https://img.shields.io/npm/v/trailpack-annotations.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/trailpack-annotations
+[ci-image]: https://travis-ci.org/jaumard/trailpack-annotations.svg?branch=master
+[ci-url]: https://travis-ci.org/jaumard/trailpack-annotations
+[daviddm-image]: http://img.shields.io/david/jaumard/trailpack-annotations.svg?style=flat-square
+[daviddm-url]: https://david-dm.org/jaumard/trailpack-annotations
+[codeclimate-image]: https://img.shields.io/codeclimate/github/jaumard/trailpack-annotations.svg?style=flat-square
+[codeclimate-url]: https://codeclimate.com/github/jaumard/trailpack-annotations
+[gitter-image]: http://img.shields.io/badge/+%20GITTER-JOIN%20CHAT%20%E2%86%92-1DCE73.svg?style=flat-square
+[gitter-url]: https://gitter.im/trailsjs/trails
