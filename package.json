@@ -9,6 +9,7 @@
     "url": "https://github.com/jaumard"
   },
   "files": [
+    "lib",
     "archetype",
     "annotations",
     "config"
