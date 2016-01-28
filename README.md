@@ -97,9 +97,10 @@ module.exports = class MyCustomAnnotation extends Annotation{
      * File path
      *
      * @type {String}
+     * @required
      */
     static get path() {
-      return './annotations/MyCustomAnnotation.js'
+      return __filename
     }
 
 }

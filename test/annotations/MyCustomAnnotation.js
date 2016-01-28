@@ -29,7 +29,7 @@ module.exports = class MyCustomAnnotation extends Annotation{
      * @type {String}
      */
     static get path() {
-      return '../test/annotations/MyCustomAnnotation.js'
+      return __filename
     }
 
 }

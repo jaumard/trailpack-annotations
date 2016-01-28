@@ -53,6 +53,6 @@ module.exports = class Policy extends Annotation {
    * @type {String}
    */
   static get path() {
-    return '../annotations/policy.js'
+    return __filename
   }
 }

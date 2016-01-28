@@ -55,7 +55,7 @@ module.exports = class Route extends Annotation {
    * @type {String}
    */
   static get path() {
-    return '../annotations/route'
+    return __filename
   }
 
 }
