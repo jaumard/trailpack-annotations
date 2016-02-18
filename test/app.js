@@ -14,6 +14,7 @@ const App = {
       pathToScan: './test/api/controllers',
       customAnnotations: require('./annotations')
     },
+    routes: [],
     main: {
       packs: [
         smokesignals.Trailpack,

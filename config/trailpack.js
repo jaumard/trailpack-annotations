@@ -8,13 +8,7 @@ module.exports = {
   /**
    * API and config resources provided by this Trailpack.
    */
-  provides: {
-    api: {
-      controllers: [ ]
-      // ...
-    },
-    config: [ ]
-  },
+  provides: {},
 
   /**
    * Configure the lifecycle of this pack; that is, how it boots up, and which
@@ -26,16 +20,16 @@ module.exports = {
        * List of events that must be fired before the configure lifecycle
        * method is invoked on this Trailpack
        */
-      listen: [ ],
+      listen: [],
 
       /**
        * List of events emitted by the configure lifecycle method
        */
-      emit: [ ]
+      emit: []
     },
     initialize: {
-      listen: [ ],
-      emit: [ ]
+      listen: [],
+      emit: []
     }
   }
 }
