@@ -10,26 +10,26 @@ module.exports = class MyCustomAnnotation extends Annotation{
      *
      * @type {Array}
      */
-    static get targets() {
-      return [Annotation.METHOD]
-    }
+  static get targets() {
+    return [Annotation.METHOD]
+  }
 
     /**
      * The function to call when annotations are find
      *
      * @type {Function}
      */
-    handler(app, annotation) {
-      app.config.annotations.myCustomAnnotation = annotation.value
-    }
+  handler(app, annotation) {
+    app.config.annotations.myCustomAnnotation = annotation.value
+  }
 
     /**
      * File path
      *
      * @type {String}
      */
-    static get path() {
-      return __filename
-    }
+  static get path() {
+    return __filename
+  }
 
 }
