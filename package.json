@@ -1,6 +1,6 @@
 {
   "name": "trailpack-annotations",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Add routes, policies and custom annotations support for Tails.js applications",
   "homepage": "https://github.com/jaumard/trailpack-annotations",
   "author": {
@@ -25,6 +25,7 @@
   "dependencies": {
     "ecmas-annotations": "^1.0.2",
     "glob": "^7.0.3",
+    "joi": "^8.1.0",
     "lodash": "^4.12.0",
     "trailpack": "^1.0.2"
   },
