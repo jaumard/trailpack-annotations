@@ -49,9 +49,7 @@ module.exports = class DefaultController extends Controller {
 }
 ```
 
-### Query
-
-You can also use @QUERY for defining new routes.
+You can also use @METHOD for defining new routes.
 ```
 module.exports = class DefaultController extends Controller {
 
