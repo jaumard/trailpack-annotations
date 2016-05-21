@@ -78,7 +78,7 @@ module.exports = class ViewController extends Controller {
   }
 
   /**
-   * @Route({method: "GET", path: "/validation", config: { validation: {
+   * @Route({method: "GET", path: "/validation", config: { validate: {
    * query: { test: Joi.string().required() }
    * }}})
    * @param request
@@ -87,5 +87,18 @@ module.exports = class ViewController extends Controller {
   validation(request, reply) {
     reply('Hello')
   }
+
+
+  /**
+   * @POST({path:"/validation", validate: {
+   * payload: { test: Joi.string().required() }
+   * }})
+   * @param request
+   * @param reply
+   */
+  postQueryWithValidation(request, reply) {
+    reply('Hello')
+  }
+
 
 }

@@ -5,7 +5,7 @@ const Joi = require('joi')
 describe('Annotations', () => {
   describe('Route', () => {
     it('app should have three routes', (done) => {
-      assert.equal(global.app.config.routes.length, 10)
+      assert.equal(global.app.config.routes.length, 11)
       done()
     })
     it('/default/info route should exist', (done) => {
@@ -89,14 +89,29 @@ describe('Annotations', () => {
       })
       done()
     })
-    it('/validation route should exist with validation ', (done) => {
+    it('GET /validation route should exist with validation ', (done) => {
       assert.deepEqual(global.app.config.routes[9], {
         handler: 'ViewController.validation',
         method: 'GET',
         path: '/validation',
         config: {
-          validation: {
+          validate: {
             query: {
+              test: Joi.string().required()
+            }
+          }
+        }
+      })
+      done()
+    })
+    it('POST /validation route should exist with validation ', (done) => {
+      assert.deepEqual(global.app.config.routes[10], {
+        handler: 'ViewController.postQueryWithValidation',
+        method: 'POST',
+        path: '/validation',
+        config: {
+          validate: {
+            payload: {
               test: Joi.string().required()
             }
           }
