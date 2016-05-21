@@ -90,9 +90,9 @@ module.exports = class ViewController extends Controller {
 
 
   /**
-   * @POST({path:"/validation", validate: {
+   * @POST({path:"/validation", config: { validate: {
    * payload: { test: Joi.string().required() }
-   * }})
+   * }}})
    * @param request
    * @param reply
    */

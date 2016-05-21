@@ -24,11 +24,8 @@ module.exports = class Query extends Route {
 
     if (_.isObject(annotation.value)) {
       infos = annotation.value
-      infos.config = {}
-      infos.config.validate = annotation.value.validate
       infos.handler = annotation.className + '.' + annotation.target
       infos.method = this.query
-      delete infos.validate
     }
     else {
       const parts = annotation.value.split(' ')

@@ -77,9 +77,9 @@ module.exports = class DefaultController extends Controller {
 
   /**
    * Return some info about this application
-   * @GET(path:{'/default/info'}, validate: {
+   * @GET(path:{'/default/info'}, config: { validate: {
    * query: { infos: Joi.sring().required() }
-   * })
+   * }})
    */
   info (request, reply) {
     reply.json(this.app.services.DefaultService.getApplicationInfo())
