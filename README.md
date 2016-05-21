@@ -9,7 +9,7 @@
 :package: Add Route, Policy and custom annotations support for Tails.js applications
 
 ## Intallation
-With yo : 
+With yo :
 
 ```
 npm install -g yo generator-trails
@@ -17,7 +17,7 @@ yo trails:trailpack trailpack-annotations
 ```
 
 With npm (you will have to create config file manually) :
- 
+
 `npm install --save trailpack-annotations`
 
 ## Configuration
@@ -28,20 +28,20 @@ module.exports = {
   route: true,//enable route annotations
   pathToScan: './api/controllers',//or ./api for hmvc
   customAnnotations: null, //Add your custom annotations here, require('./annotations') for example
-    
+
 }
 ```
 
 ## Usage
 
-### Route 
+### Route
 A route added with annotation will replace any previous route set under `config/routes.js` (for a same path).
 ```
 module.exports = class DefaultController extends Controller {
 
   /**
    * Return some info about this application
-   * @Route("GET /default/info") or @Route({method: ["GET"], path: "/default/info"}) 
+   * @Route("GET /default/info") or @Route({method: ["GET"], path: "/default/info"})
    */
   info (request, reply) {
     reply.json(this.app.services.DefaultService.getApplicationInfo())
@@ -49,7 +49,47 @@ module.exports = class DefaultController extends Controller {
 }
 ```
 
-### Policy 
+### Query
+
+You can also use @QUERY for defining new routes.
+```
+module.exports = class DefaultController extends Controller {
+
+  /**
+   * Return some info about this application
+   * @GET('/default/info')
+   * @HEAD('/default/info')
+   * @OPTIONS('/default/info')
+   * @POST('/default/info')
+   * @PUT('/default/info')
+   * @PATCH('/default/info')
+   * @DELETE('/default/info')
+   */
+  info (request, reply) {
+    reply.json(this.app.services.DefaultService.getApplicationInfo())
+  }
+}
+```
+
+A more complex sample with validation.
+```
+module.exports = class DefaultController extends Controller {
+
+  /**
+   * Return some info about this application
+   * @GET(path:{'/default/info'}, config: { validate: {
+   * query: { infos: Joi.sring().required() }
+   * }})
+   */
+  info (request, reply) {
+    reply.json(this.app.services.DefaultService.getApplicationInfo())
+  }
+}
+```
+
+See [hapijs tutorial on validation](http://hapijs.com/tutorials/validation) and [joi schema validation](https://github.com/hapijs/joi) for more complex with validate object.
+
+### Policy
 A policy added with annotation will be added to policies set under `config/policies.js`.
 ```
 module.exports = class DefaultController extends Controller {
@@ -64,8 +104,8 @@ module.exports = class DefaultController extends Controller {
 }
 ```
 
-### Custom 
-Create your own annotation like this : 
+### Custom
+Create your own annotation like this :
 
 ```
 'use strict'

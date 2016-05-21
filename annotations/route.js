@@ -36,12 +36,13 @@ module.exports = class Route extends Annotation {
     if (_.isObject(annotation.value)) {
       infos = annotation.value
       infos.handler = annotation.className + '.' + annotation.target
+      if (this.query) infos.method = this.query
     }
     else {
       const parts = annotation.value.split(' ')
       infos = {
-        method: parts[0],
-        path: parts[1],
+        method: this.query || parts[0],
+        path: this.query ? parts[0] : parts[1],
         handler: annotation.className + '.' + annotation.target
       }
     }
