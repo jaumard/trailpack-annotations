@@ -1,7 +1,6 @@
 'use strict'
 
 const Query = require('./query')
-const _ = require('lodash')
 
 /**
  *
