@@ -34,7 +34,7 @@ module.exports = class GET extends Annotation {
       annotation.className = _.last(annotation.filePath.split('/')).replace('.js', '')
     }
 
-    console.log(annotation)
+
     if (_.isObject(annotation.value)) {
       infos = annotation.value
       infos.method = 'GET'
