@@ -12,6 +12,72 @@ module.exports = class ViewController extends Controller {
   }
 
   /**
+   * @GET("/query")
+   * @param request
+   * @param reply
+   */
+  get(request, reply) {
+    reply('Hello')
+  }
+
+  /**
+   * @HEAD("/query")
+   * @param request
+   * @param reply
+   */
+  head(request, reply) {
+    reply('Hello')
+  }
+
+
+  /**
+   * @OPTIONS("/query")
+   * @param request
+   * @param reply
+   */
+  options(request, reply) {
+    reply('Hello')
+  }
+
+
+  /**
+   * @POST("/query")
+   * @param request
+   * @param reply
+   */
+  post(request, reply) {
+    reply('Hello')
+  }
+
+
+  /**
+   * @PUT("/query")
+   * @param request
+   * @param reply
+   */
+  put(request, reply) {
+    reply('Hello')
+  }
+
+  /**
+   * @PATCH("/query")
+   * @param request
+   * @param reply
+   */
+  patch(request, reply) {
+    reply('Hello')
+  }
+
+  /**
+   * @DELETE("/query")
+   * @param request
+   * @param reply
+   */
+  delete(request, reply) {
+    reply('Hello')
+  }
+
+  /**
    * @Route({method: "GET", path: "/validation", config: { validation: {
    * query: { test: Joi.string().required() }
    * }}})
@@ -21,4 +87,5 @@ module.exports = class ViewController extends Controller {
   validation(request, reply) {
     reply('Hello')
   }
+
 }
