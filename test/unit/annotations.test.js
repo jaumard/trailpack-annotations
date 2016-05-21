@@ -1,10 +1,11 @@
 'use strict'
 const assert = require('assert')
+const Joi = require('joi')
 
 describe('Annotations', () => {
   describe('Route', () => {
-    it('app should have two routes', (done) => {
-      assert.equal(global.app.config.routes.length, 2)
+    it('app should have three routes', (done) => {
+      assert.equal(global.app.config.routes.length, 3)
       done()
     })
     it('/default/info route should exist', (done) => {
@@ -22,6 +23,21 @@ describe('Annotations', () => {
         handler: 'ViewController.helloWorld',
         method: 'GET',
         path: '/'
+      })
+      done()
+    })
+    it('/validation route should exist with validation ', (done) => {
+      assert.deepEqual(global.app.config.routes[2], {
+        handler: 'ViewController.validation',
+        method: 'GET',
+        path: '/validation',
+        config: {
+          validation: {
+            query: {
+              test: Joi.string().required()
+            }
+          }
+        }
       })
       done()
     })
