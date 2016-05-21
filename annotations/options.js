@@ -1,12 +1,12 @@
 'use strict'
 
-const Query = require('./query')
+const Route = require('./route')
 
 /**
  *
  * @type {*}
  */
-module.exports = class OPTIONS extends Query {
+module.exports = class OPTIONS extends Route {
 
   constructor(data, filePath) {
     super(data, filePath)

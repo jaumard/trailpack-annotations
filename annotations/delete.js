@@ -1,13 +1,12 @@
 'use strict'
 
-const Query = require('./query')
+const Route = require('./route')
 
 /**
  *
  * @type {*}
  */
-module.exports = class DELETE extends Query {
-
+module.exports = class DELETE extends Route {
 
   constructor(data, filePath) {
     super(data, filePath)
