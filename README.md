@@ -21,7 +21,7 @@ With npm (you will have to create config file manually) :
 `npm install --save trailpack-annotations`
 
 ## Configuration
-First you need to add this trailpack to your __main__ configuratio : 
+First you need to add this trailpack to your __main__ configuration : 
 ```js
 // config/main.js
 
