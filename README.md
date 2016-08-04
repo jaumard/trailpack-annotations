@@ -5,6 +5,8 @@
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Code Climate][codeclimate-image]][codeclimate-url]
+[![Beerpay](https://beerpay.io/jaumard/trailpack-annotations/make-wish.svg?style=flat)](https://beerpay.io/jaumard/trailpack-annotations)
+[![Beerpay](https://beerpay.io/jaumard/trailpack-annotations/badge.svg?style=flat)](https://beerpay.io/jaumard/trailpack-annotations)
 
 :package: Add Route, Policy and custom annotations support for Tails.js applications
 
