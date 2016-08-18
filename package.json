@@ -32,7 +32,7 @@
   "devDependencies": {
     "eslint": "^3.2.0",
     "eslint-config-trails": "^1.0.6",
-    "mocha": "^2.4.5",
+    "mocha": "^3.0.2",
     "smokesignals": "^1.2.2",
     "trailpack-core": "^1.0.0-beta-6",
     "trailpack-router": "^1.0.2",
