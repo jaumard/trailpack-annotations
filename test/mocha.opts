@@ -2,6 +2,9 @@
 ./test/**/*.test.js
 --reporter spec
 --timeout 120000
+--no-exit
+--reporter mochavigo
+--reporter-options project-key=bc7cc556cba767e693a56780828765e18248e72a
 --recursive
 --full-trace
 --slow 50
