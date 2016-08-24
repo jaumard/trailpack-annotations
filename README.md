@@ -3,6 +3,7 @@
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][npm-download]][npm-url]
 [![Build status][ci-image]][ci-url]
+[![Test status][vigo-image]][vigo-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Code Climate][codeclimate-image]][codeclimate-url]
 [![Beerpay](https://beerpay.io/jaumard/trailpack-annotations/make-wish.svg?style=flat)](https://beerpay.io/jaumard/trailpack-annotations)
@@ -168,7 +169,8 @@ Now I can add `@MyCustomAnnotation("It's works")` on methods.
 ## License
 [MIT](https://github.com/jaumard/trailpack-annotations/blob/master/LICENSE)
 
-
+[vigo-image]:https://vigoreport.io/p/badge/mrC2MUz
+[vigo-url]:https://vigoreport.io/p/mrC2MUz
 [npm-image]: https://img.shields.io/npm/v/trailpack-annotations.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/trailpack-annotations
 [npm-download]: https://img.shields.io/npm/dt/trailpack-annotations.svg
