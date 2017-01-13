@@ -17,8 +17,6 @@ const App = {
     routes: [],
     main: {
       packs: [
-        smokesignals.Trailpack,
-        require('trailpack-core'),
         require('trailpack-router'),
         require('../') // trailpack-annotations
       ]
