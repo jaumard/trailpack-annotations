@@ -27,7 +27,7 @@
     "glob": "^7.1.1",
     "joi": "^10.1.0",
     "lodash": "^4.17.4",
-    "trailpack": "^2.1.0"
+    "trailpack": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^3.13.1",
