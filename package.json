@@ -36,7 +36,7 @@
     "mochavigo": "^1.0.9",
     "smokesignals": "^2.1.1",
     "trailpack-router": "^2.1.0",
-    "trails": "^2.0.1"
+    "trails": "^3.2.2"
   },
   "bundledDependencies": [
     "trailpack"
