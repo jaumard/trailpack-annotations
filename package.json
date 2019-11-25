@@ -30,7 +30,7 @@
     "trailpack": "^2.1.0"
   },
   "devDependencies": {
-    "eslint": "^3.13.1",
+    "eslint": "^6.7.1",
     "eslint-config-trails": "^2.0.6",
     "mocha": "^3.2.0",
     "mochavigo": "^1.0.9",
