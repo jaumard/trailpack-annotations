@@ -27,7 +27,8 @@
     "glob": "^7.1.1",
     "joi": "^10.1.0",
     "lodash": "^4.17.4",
-    "trailpack": "^2.1.0"
+    "trailpack": "^2.1.0",
+    "snyk": "^1.316.2"
   },
   "devDependencies": {
     "eslint": "^3.13.1",
@@ -42,7 +43,9 @@
     "trailpack"
   ],
   "scripts": {
-    "test": "eslint --fix . && mocha"
+    "test": "eslint --fix . && mocha",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">= 4.0.0"
@@ -51,5 +54,6 @@
     "extends": "trails"
   },
   "repository": "https://github.com/jaumard/trailpack-annotations",
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
